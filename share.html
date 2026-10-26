@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Danial · Tazkiyah</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0A1430">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Danial">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <style>
+    .wrap { padding-bottom: calc(var(--safe-b) + 40px); }
+    .daypick { display: flex; gap: 6px; overflow-x: auto; margin: 0 -16px 14px; padding: 0 16px 4px; scrollbar-width: none; }
+    .daypick::-webkit-scrollbar { display: none; }
+    .daypick button { flex: 0 0 auto; min-width: 58px; padding: 8px 10px; border-radius: 14px; border: 1px solid var(--line); background: rgba(8,18,44,.45); text-align: center; }
+    .daypick button b { display: block; font-family: var(--serif); font-size: 18px; font-weight: 600; }
+    .daypick button span { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; }
+    .daypick button.sel { background: linear-gradient(140deg, var(--blue-2), var(--blue-deep)); border-color: transparent; }
+    .daypick button.sel span { color: #DCE8FF; }
+    .pills { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .pill { text-align: center; padding: 10px 2px; border-radius: 14px; border: 1px solid var(--line); background: rgba(8,18,44,.45); }
+    .pill .tick { margin: 0 auto 6px; width: 26px; height: 26px; }
+    .pill div { font-size: 12.5px; font-weight: 700; }
+    .pill .arn { font-family: var(--arabic); font-size: 13px; color: var(--muted); font-weight: 400; }
+    .pill.on { background: rgba(76,141,255,.16); border-color: rgba(125,178,255,.45); }
+    .ro .row { cursor: default; }
+    .ro .row:active { transform: none; }
+    .state { font-size: 12px; font-weight: 700; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+    .state.ok { color: var(--ok); border-color: rgba(124,224,195,.35); }
+    .state.cx { color: var(--warn); border-color: rgba(255,201,121,.35); }
+    .live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+    .live i { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 8px var(--ok); animation: pulse 2s infinite; }
+    .center-msg { text-align: center; padding: 60px 20px; }
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <img src="assets/icons/icon-192.png" alt="">
+        <div><div class="brand-name">Tazkiyah</div><div class="brand-sub" id="owner">Danial's progress</div></div>
+      </div>
+      <span class="live" id="live"><i></i>Live</span>
+    </header>
+    <main id="main"><div class="center-msg muted">Loading…</div></main>
+  </div>
+  <canvas id="fx"></canvas>
+  <script src="js/config.js"></script>
+  <script src="js/reminders.js"></script>
+  <script src="js/lessons.js"></script>
+  <script src="js/hijri.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/share.js"></script>
+</body>
+</html>
