@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#1B3470"/>
+      <stop offset="0.55" stop-color="#0D1B3F"/>
+      <stop offset="1" stop-color="#060D22"/>
+    </radialGradient>
+    <linearGradient id="wingUp" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#D6E8FF"/>
+      <stop offset="0.35" stop-color="#7DB4FF"/>
+      <stop offset="0.75" stop-color="#2F74FF"/>
+      <stop offset="1" stop-color="#1A47C9"/>
+    </linearGradient>
+    <linearGradient id="wingLow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#BFDBFF"/>
+      <stop offset="0.5" stop-color="#4F8CFF"/>
+      <stop offset="1" stop-color="#1D4FD6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#6FA8FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#6FA8FF" stop-opacity="0"/>
+    </radialGradient>
+    <g id="half">
+      <path d="M262 236 C 290 160, 352 98, 418 96 C 470 95, 474 150, 452 196 C 432 238, 388 262, 336 266 C 304 268, 280 264, 262 258 Z" fill="url(#wingUp)" stroke="#0B1C4A" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M274 236 C 300 180, 346 138, 392 132 C 420 130, 428 156, 414 186 C 398 218, 360 238, 318 244 C 300 246, 286 244, 274 240 Z" fill="#E8F2FF" fill-opacity="0.22"/>
+      <path d="M262 270 C 300 272, 352 286, 374 320 C 396 356, 384 398, 350 404 C 318 410, 292 384, 278 348 C 268 322, 263 296, 262 276 Z" fill="url(#wingLow)" stroke="#0B1C4A" stroke-width="7" stroke-linejoin="round"/>
+      <circle cx="430" cy="128" r="7" fill="#F2F7FF"/>
+      <circle cx="446" cy="160" r="5" fill="#F2F7FF"/>
+      <circle cx="356" cy="386" r="5" fill="#F2F7FF" fill-opacity="0.9"/>
+    </g>
+  </defs>
+  <rect width="512" height="512" rx="0" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="200" fill="url(#glow)"/>
+  <use href="#half"/>
+  <use href="#half" transform="translate(512 0) scale(-1 1)"/>
+  <ellipse cx="256" cy="282" rx="10" ry="76" fill="#0B1C4A"/>
+  <ellipse cx="256" cy="282" rx="5" ry="68" fill="#9CC4FF" fill-opacity="0.55"/>
+  <circle cx="256" cy="196" r="14" fill="#0B1C4A"/>
+  <path d="M250 186 C 240 160, 222 142, 204 134" fill="none" stroke="#0B1C4A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M262 186 C 272 160, 290 142, 308 134" fill="none" stroke="#0B1C4A" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="204" cy="134" r="7" fill="#9CC4FF"/>
+  <circle cx="308" cy="134" r="7" fill="#9CC4FF"/>
+</svg>
